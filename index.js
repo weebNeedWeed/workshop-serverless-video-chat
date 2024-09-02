@@ -25,7 +25,7 @@ const init = async () => {
   });
   document.getElementById("user1").srcObject = localStream;
 
-  socket = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL);
+  socket = new WebSocket(import.meta.env.VITE_WEBSOCKET_URI);
 
   socket.onopen = () => {
     socket.send(
