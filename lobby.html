@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat App</title>
+
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<form style="margin-top: 30px; margin-left: 30px;" id="join-form">
+		<input type="text" name="roomId">
+		<input type="submit" value="Join">
+	</form>
+
+	<script>
+		document.getElementById("join-form").onsubmit = (event) => {
+			event.preventDefault();
+
+			const roomId = event.target.roomId.value;
+			if (roomId) {
+				window.location.href = "index.html?room=" + roomId;
+			}
+		}
+	</script>
+</body>
+
+</html>
